@@ -145,10 +145,10 @@ Client A (Subscriber)        Broker MQTT           Client B (Publisher)
 
 Proiectul este structurat pe 5 module principale de dezvoltare, validate prin teste unitare automate:
 
-| Etapa / Modul | Descriere Activitate | Livrabil Tehnic | Status | Responsabil | 
-| ----- | ----- | ----- | ----- | ----- | 
-| **Modulul 1** | Arhitectura de baza, I/O binar (`bytes`/`bytearray`), operatii pe biti. | Parsere flag-uri, bitmasking | **Completat** | Echipa | 
-| **Modulul 2** | Encodare/Decodare VBI (Baza 128), operare `struct` Big-Endian, `parse_raw_packet`. | Algoritm VBI + Suita `unittest` | **Completat** | Echipa | 
-| **Modulul 3** | Structura Pachete MQTT v5.0: Handshake (`CONNECT`, `CONNACK`), validare versiune & proprietati. | Parser `CONNECT` & builder `CONNACK` | **In lucru** | Echipa | 
-| **Modulul 4** | Engine de abonamente, reprezentare arbore topic-uri, suport wildcard (`+`, `#`). | `SubscriptionTree` & logica de rutare | Programat | Echipa | 
-| **Modulul 5** | Concurrenta (Multi-threading / Async I/O), integrare finala Socket Server, testare cu MQTTX. | Broker executabil pe portul 1883 | Programat | Echipa | 
+| Etapa / Modul | Descriere Activitate | Livrabil Tehnic | Status |
+| ----- | ----- | ----- | ----- |
+| **Modulul 1** | Arhitectura de baza, I/O binar (`bytes`/`bytearray`), operatii pe biti. | Parsere flag-uri, bitmasking | **Completat** |
+| **Modulul 2** | Encodare/Decodare VBI (Baza 128), operare `struct` Big-Endian, `parse_raw_packet`. | Algoritm VBI + Suita `unittest` | **Completat** |
+| **Modulul 3** | Structura Pachete MQTT v5.0: Handshake (`CONNECT`, `CONNACK`), validare versiune & proprietati. | Parser `CONNECT` & builder `CONNACK` | **In lucru** | 
+| **Modulul 4** | Engine de abonamente, reprezentare arbore topic-uri, suport wildcard (`+`, `#`). | `SubscriptionTree` & logica de rutare | Programat |
+| **Modulul 5** | Concurrenta (Multi-threading / Async I/O), integrare finala Socket Server, testare cu MQTTX. | Broker executabil pe portul 1883 | Programat |
